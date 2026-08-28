@@ -1,0 +1,25 @@
+name: Evaluation proposal
+description: Propose a deterministic metric, floor, or evidence adapter
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision problem
+      description: Explain which model-selection decision this improves.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Metadata-only evidence contract
+      description: Define fields and how they are measured without prompt or completion content.
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation impact and false-confidence boundary
+    validations:
+      required: true
