@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1",
+  "suite": {
+    "id": "payments-repository-v1",
+    "repository": "payments-api",
+    "description": "Representative bug fixes and bounded feature tasks"
+  },
+  "runs": [
+    {"taskId":"billing-01","model":"model-a","attemptId":"a-01","verified":true,"durationMs":183200,"costUsd":0.42,"patch":{"files":7,"additions":184,"deletions":37},"scopeEscapes":0,"falseCompletion":false,"testPassRate":1},
+    {"taskId":"billing-02","model":"model-a","attemptId":"a-02","verified":true,"durationMs":205000,"costUsd":0.46,"patch":{"files":5,"additions":132,"deletions":22},"scopeEscapes":0,"falseCompletion":false,"testPassRate":1},
+    {"taskId":"billing-01","model":"model-b","attemptId":"b-01","verified":false,"durationMs":94000,"costUsd":0.12,"patch":{"files":12,"additions":340,"deletions":19},"scopeEscapes":2,"falseCompletion":true,"testPassRate":0.72},
+    {"taskId":"billing-02","model":"model-b","attemptId":"b-02","verified":true,"durationMs":110000,"costUsd":0.14,"patch":{"files":9,"additions":260,"deletions":31},"scopeEscapes":0,"falseCompletion":false,"testPassRate":1}
+  ]
+}
