@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://github.com/mturac/InferenceFit/schema/inferencefit-report.schema.json",
+  "title":"InferenceFit evaluation report",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schemaVersion","generator","suite","policy","models","recommendation","reportHash"],
+  "properties":{
+    "schemaVersion":{"const":"1"},
+    "generator":{"type":"object"},
+    "suite":{"type":"object"},
+    "policy":{"type":"object"},
+    "models":{"type":"array"},
+    "recommendation":{"type":["object","null"]},
+    "reportHash":{"type":"string","pattern":"^[a-f0-9]{64}$"}
+  }
+}

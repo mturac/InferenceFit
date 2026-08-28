@@ -1,0 +1,27 @@
+{
+  "name": "@mturac/inferencefit",
+  "version": "0.1.0",
+  "description": "Evidence-based model selection for coding tasks using verified repository outcomes.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Mehmet Turac",
+  "repository": {"type":"git","url":"git+https://github.com/mturac/InferenceFit.git"},
+  "bugs": {"url":"https://github.com/mturac/InferenceFit/issues"},
+  "homepage": "https://github.com/mturac/InferenceFit#readme",
+  "keywords": ["model-evaluation","coding-agent","vibe-coding","llm-evaluation","verified-completion","developer-tools","benchmark","typescript"],
+  "engines": {"node": ">=22"},
+  "files": ["bin/","dist/","schema/","examples/","README.md","LICENSE","NOTICE","CHANGELOG.md"],
+  "bin": {"inferencefit":"./bin/inferencefit.mjs"},
+  "exports": {".": {"types":"./dist/index.d.ts","import":"./dist/index.js"}},
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "npm run build && node --check bin/inferencefit.mjs",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "test:types": "tsc -p tsconfig.type-tests.json",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "verify:package": "node scripts/package-smoke.mjs",
+    "verify": "npm run check && npm run test:types && node --test test/*.test.mjs && npm run verify:assets && npm run verify:package"
+  },
+  "devDependencies": {"@types/node":"22.15.3","typescript":"5.8.3"}
+}
