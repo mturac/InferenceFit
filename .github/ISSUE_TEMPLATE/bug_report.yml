@@ -1,0 +1,26 @@
+name: Bug report
+description: Report reproducible evaluation, validation, or recommendation behavior
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Remove private repository names, model provider secrets, prompts, and completions before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal metadata-only reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected recommendation or metric
+    validations:
+      required: true
