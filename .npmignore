@@ -1,0 +1,8 @@
+src/
+test/
+scripts/
+docs/
+.github/
+.bootstrap/
+tsconfig*.json
+.editorconfig
